@@ -1,6 +1,9 @@
 <%= flash[:message] %>
-<%= form_for :auth, url: login_path do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+<%= form_for :auth, url: personalities_path do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
     <%= f.submit "Login" %>
 <% end %>
+<a href="/signup">
+    <p>Sign up</p>
+</a>
