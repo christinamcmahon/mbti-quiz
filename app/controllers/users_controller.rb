@@ -14,6 +14,7 @@ class UsersController < ApplicationController
         if @user.save
             redirect_to @user
         else 
+            flash[:message] = @user.full_messages
             render :new
         end
     end
