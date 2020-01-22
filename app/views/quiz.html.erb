@@ -1,0 +1,10 @@
+<h1>Personality Quiz</h1>
+<p>For each section, select the item that you identify with most:</p>
+<form>
+    <% @answers.each do |answer| %>
+        <h3><%= answer.question %></h3>
+        <p><input type="radio" name="option" /><%= answer.option1 %></p>
+        <p><input type="radio" name="option" /><%= answer.option2 %></p>
+    <% end %>
+    <input type="submit" name="submit"/>
+</form>
