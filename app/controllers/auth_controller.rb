@@ -3,9 +3,9 @@ class AuthController < ApplicationController
     end
 
     def authenticate
-        @user = User.find_by(name: params[:auth][:name])
+        @user = User.find_by(username: params[:auth][:username])
         if @user 
-            sessions[:user_id] = @user.id
+            session[:user_id] = @user.id
             redirect_to personalities_path
         else
             flash[:message] = "Incorrect Information"
