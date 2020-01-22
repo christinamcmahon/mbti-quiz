@@ -1,4 +1,12 @@
 <h1>Edit my Profile</h1>
-<%= render 'form' %>
+<%= form_for @user do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %><br>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+    <%= f.label :bio %>
+    <%= f.text_area :bio %><br>
+    <%= f.submit %>
+<% end %>
 <%= link_to "Delete this profile", user_path(@user), method: :delete %>
     
