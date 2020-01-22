@@ -1,3 +1,15 @@
 <h1><%= @user.name %></h1>
+<h2>Personality Type: 
+<% if @user.personality_id == nil %>
+    <%= "TBD" %>
+<% else %>
+    <%= <%= link_to @user.personality, personality_path(@user.personality_id) %>%>
+<% end %>
+</h2>
 <p><%= @user.username %></p>
 <p><%= @user.bio %></p>
+<h3>Following: 
+<% @user.friends.each do |friend| %>
+    <%= link_to friend.name, user_path(friend.id) %>
+<% end %>
+</h3>
