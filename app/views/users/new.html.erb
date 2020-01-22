@@ -1,2 +1,12 @@
 <h1>Create a New User</h1>
-<%= render 'form' %>
+<%= form_for @user, url: new_signup_path do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %><br>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+    <%= f.label :bio %>
+    <%= f.text_area :bio %><br>
+    <%= f.label "Follow: " %><br>
+    <%= collection_check_boxes(:friend, :user_ids, User.all, :id, :name) %><br>
+    <%= f.submit %>
+<% end %>
