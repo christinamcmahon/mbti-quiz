@@ -1,4 +1,6 @@
 class PersonalitiesController < ApplicationController
+    before_action :require_login
+
     def index 
         @personalities = Personality.all
     end
