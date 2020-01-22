@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MbtiQuiz</title>
+    <title>Personality Quiz</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <div>
+    <a href="/">
+      <h1>Personality Quiz</h1>
+    </a>
+    <div>
+        <% if logged_in? %>
+          <%= link_to 'Create a New User', new_user_path, {class: 'item'} %>
+          <%= link_to 'Logout', logout_path, {class: 'item'} %>
+        <% else %>
+          <%= link_to 'Login', login_path,{class: 'item'}%>
+        <% end %>
+      </div>
+  </div>
   <body>
     <%= yield %>
   </body>
