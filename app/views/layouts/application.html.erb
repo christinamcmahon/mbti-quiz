@@ -14,7 +14,8 @@
     </a>
     <div>
         <% if logged_in? %>
-          <%= link_to 'Create a New User', new_user_path, {class: 'item'} %>
+          <%= link_to 'Take the Quiz', quiz_path, {class: 'item'} %>
+          <%= link_to 'Edit my Profile', edit_user_path, {class: 'item'} %>
           <%= link_to 'Logout', logout_path, {class: 'item'} %>
         <% end %>
       </div>
