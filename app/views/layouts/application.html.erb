@@ -15,6 +15,7 @@
           <%= link_to 'Take the Quiz', quiz_question_1_path %>
           <%= link_to 'Personality Types', personalities_path %>
           <%= link_to 'User Profiles', users_path %>
+          <%= link_to 'Edit my Profile', edit_user_path(current_user.id) %>
           <%= link_to 'Logout', logout_path %>
         <% end %>
       </div>
