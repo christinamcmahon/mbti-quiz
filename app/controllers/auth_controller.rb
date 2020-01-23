@@ -1,4 +1,5 @@
 class AuthController < ApplicationController 
+    helper_method :logout
     def login
     end
 
@@ -15,6 +16,7 @@ class AuthController < ApplicationController
 
     def logout
         session.clear
+        cookies.clear
         redirect_to login_path
     end
 end
