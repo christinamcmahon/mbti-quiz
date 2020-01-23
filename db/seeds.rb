@@ -23,8 +23,8 @@ estp = Personality.create(name: "ESTP", description: "ESTPs are flexible and tol
 esfp = Personality.create(name: "ESFP", description: "ESFPs are outgoing, friendly, and accepting. They are exuberant lovers of life, people, and material comforts. They enjoy working with others to make things happen. ESFPs bring common sense and a realistic approach to their work, and make work fun. They are flexible and spontaneous and adapt readily to new people and environments. ESFPs learn best by trying a new skill with other people.")
 
 # USERS
-christina = User.create(username: "christina_mcm", name: "Christina McMahon", bio: "I'm a student at Flatiron School.", personality_id: intj.id)
-sean = User.create(username: "sean_stamm", name: "Sean Stamm", bio: "I'm a software engineer at Teleion.", personality_id: nil)
+# christina = User.create(username: "christina_mcm", name: "Christina McMahon", bio: "I'm a student at Flatiron School.", personality_id: nil)
+# sean = User.create(username: "sean_stamm", name: "Sean Stamm", bio: "I'm a software engineer at Teleion.", personality_id: nil)
 
 # FRIENDS
 
