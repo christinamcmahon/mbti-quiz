@@ -10,12 +10,12 @@
 </h3>
 <p><%= @user.bio %></p>
 
-<h3>
-<% if @user.friends.count > 1 %>
+<h5>
+<% if @user.friends.count > 0 %>
     <%= "Friends:" %><br>
     <% @user.friends.each do |friend| %> 
         <% fri = User.find(friend.friend_id.to_i) %>
         <%= link_to fri.name, user_path(fri) %><br>
     <% end %>
 <% end %>
-</h3>
+</h5>
