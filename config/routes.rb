@@ -5,10 +5,13 @@ Rails.application.routes.draw do
   root to: "personalities#index"
 
   get '/signup', to: "users#new", as: "signup"
-  post '/signup', to: "users#create", as: "new_signup"
+  post '/signup', to: "users#create"
   
   get '/login', to: "auth#login", as: "login"
   post '/login', to: "auth#authenticate"
 
   get '/logout', to: "auth#logout"
+
+  get '/quiz', to:"answers_users#new", as: "quiz"
+  post '/quiz', to:"asnwers_users#create"
 end
