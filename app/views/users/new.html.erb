@@ -6,7 +6,7 @@
     <%= f.text_field :name %><br>
     <%= f.label :bio %>
     <%= f.text_area :bio %><br>
-    <%= f.label "Follow: " %><br>
+    <%= f.label "Friends: " %><br>
     <%= f.collection_check_boxes(:friend_ids , User.all, :id, :name) %><br>
     <%= f.submit %>
 <% end %>
