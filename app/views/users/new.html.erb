@@ -1,5 +1,5 @@
 <h1>Create a New User</h1>
-<%= form_for @user, url: new_signup_path do |f| %>
+<%= form_for @user do |f| %>
     <%= f.label :username %>
     <%= f.text_field :username %><br>
     <%= f.label :name %>
@@ -7,6 +7,6 @@
     <%= f.label :bio %>
     <%= f.text_area :bio %><br>
     <%= f.label "Follow: " %><br>
-    <%= collection_check_boxes(:friend, :user_ids, User.all, :id, :name) %><br>
+    <%= f.collection_check_boxes(:friend_ids , User.all, :id, :name) %><br>
     <%= f.submit %>
 <% end %>
