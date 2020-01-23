@@ -12,6 +12,16 @@ Rails.application.routes.draw do
 
   get '/logout', to: "auth#logout"
 
-  get '/quiz', to:"answers_users#new", as: "quiz"
-  post '/quiz', to:"asnwers_users#create"
+  get '/quiz_question_1', to:"answers_users#question1"
+  post '/quiz_question_1', to:"answers_users#create_q1"
+
+  get '/quiz_question_2', to:"answers_users#question2"
+  post '/quiz_question_2', to:"answers_users#create_q2"
+
+  get '/quiz_question_3', to:"answers_users#question3"
+  post '/quiz_question_3', to:"answers_users#create_q3"
+
+  get '/quiz_question_4', to:"answers_users#question4"
+  post '/quiz_question_4', to:"answers_users#create_q4"
+
 end
