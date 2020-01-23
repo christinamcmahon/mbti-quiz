@@ -1,3 +1,28 @@
-<% @personalities.each do |personality| %>
-    <%= link_to personality.name, personality_path(personality) %>
-<% end %>
+<table class="table">
+  <tbody>
+    <tr>
+      <td><%= link_to 'INTJ', personality_path(Personality.find_by(name: "INTJ")) %></td>
+      <td><%= link_to 'INTP', personality_path(Personality.find_by(name: "INTP")) %></td>
+      <td><%= link_to 'ENTJ', personality_path(Personality.find_by(name: "ENTJ")) %></td>
+      <td><%= link_to 'ENTP', personality_path(Personality.find_by(name: "ENTP")) %></td>
+    </tr>
+    <tr>
+      <td><%= link_to 'INFJ', personality_path(Personality.find_by(name: "INFJ")) %></td>
+      <td><%= link_to 'INFP', personality_path(Personality.find_by(name: "INFP")) %></td>
+      <td><%= link_to 'ENFJ', personality_path(Personality.find_by(name: "ENFJ")) %></td>
+      <td><%= link_to 'ENFP', personality_path(Personality.find_by(name: "ENFP")) %></td>
+    </tr>
+    <tr>
+      <td><%= link_to 'ISTJ', personality_path(Personality.find_by(name: "ISTJ")) %></td>
+      <td><%= link_to 'ISFJ', personality_path(Personality.find_by(name: "ISFJ")) %></td>
+      <td><%= link_to 'ESTJ', personality_path(Personality.find_by(name: "ESTJ")) %></td>
+      <td><%= link_to 'ESFJ', personality_path(Personality.find_by(name: "ENTP")) %></td>
+    </tr>
+    <tr>
+      <td><%= link_to 'ISTP', personality_path(Personality.find_by(name: "ISTP")) %></td>
+      <td><%= link_to 'ISFP', personality_path(Personality.find_by(name: "ISFP")) %></td>
+      <td><%= link_to 'ESTP', personality_path(Personality.find_by(name: "ESTP")) %></td>
+      <td><%= link_to 'ESFP', personality_path(Personality.find_by(name: "ESFP")) %></td>
+    </tr>
+  </tbody>
+</table>
