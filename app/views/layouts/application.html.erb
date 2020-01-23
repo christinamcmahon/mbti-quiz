@@ -9,18 +9,18 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <div>
-    <a href="/personalities">
-      <h1>Personality Quiz</h1>
-    </a>
+    <h1>Personality Type Indicator</h1>
     <div>
         <% if logged_in? %>
-          <%= link_to 'Take the Quiz', quiz_path, {class: 'item'} %>
-          <%= link_to 'Edit my Profile', edit_user_path, {class: 'item'} %>
-          <%= link_to 'Logout', logout_path, {class: 'item'} %>
+          <%= link_to 'Take the Quiz', quiz_question_1_path %>
+          <%= link_to 'Personality Types', personalities_path %>
+          <%= link_to 'User Profiles', users_path %>
+          <%= link_to 'Logout', logout_path %>
         <% end %>
       </div>
   </div>
   <body>
+    <p></p>
     <%= yield %>
   </body>
 </html>
