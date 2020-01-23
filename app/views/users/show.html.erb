@@ -3,13 +3,17 @@
 <% if @user.personality_id == nil %>
     <%= "TBD" %>
 <% else %>
-    <%= <%= link_to @user.personality, personality_path(@user.personality_id) %>%>
+    <%= link_to @user.personality.name, personality_path(@user.personality_id) %>
 <% end %>
 </h2>
 <p><%= @user.username %></p>
 <p><%= @user.bio %></p>
 <h3>Following: 
-<% @user.friends.each do |friend| %>
-    <%= link_to friend.name, user_path(friend.id) %>
+
+<% @user.friends.each do |friend| %> 
+    <% if friend.friend_id != "" %>
+        <% fri = User.find(friend.friend_id.to_i) %>
+        <%= link_to fri.name, user_path(fri) %>
+    <% end %>
 <% end %>
 </h3>
