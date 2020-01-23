@@ -1,20 +1,21 @@
 <h1><%= @user.name %></h1>
-<h2>Personality Type:
+<h6>(<%= @user.username %>)</h6>
+<h3>Personality Type:
 <% if !AnswersUser.find_by(user_id: @user.id) %>
     <%= "TBD" %>
 <% else %>
     <% my_personality = @user.calculate_personality %>
     <%= link_to @user.personality.name, personality_path(my_personality.id) %>
 <% end %>
-</h2>
-<p><%= @user.username %></p>
+</h3>
 <p><%= @user.bio %></p>
-<h3>Friends: 
 
+<h3>
 <% if @user.friends.count > 1 %>
+    <%= "Friends:" %><br>
     <% @user.friends.each do |friend| %> 
         <% fri = User.find(friend.friend_id.to_i) %>
-        <%= link_to fri.name, user_path(fri) %>
+        <%= link_to fri.name, user_path(fri) %><br>
     <% end %>
 <% end %>
 </h3>
