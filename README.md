@@ -1,24 +1,36 @@
-# README
+Flatiron - Mod 2 Project: Personality Type Indicator
+========================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Personality Type Indicator was created by Christina ([christinamcmahon](https://github.com/christinamcmahon)). 
+Questions were sourced from 16Personalities
+Type Descriptions were sourced from MyersBriggs
 
-Things you may want to cover:
+## About
 
-* Ruby version
+Personality Type Indicator allows users to create a profile, take a quiz to determine their personality type, and friend other users.
 
-* System dependencies
+## How to Use
+ 
+1. Clone this to your computer
+2. In the terminal, run **bundle**, **rake db:migrate** and **rake db:seed** to populate the database
+3. Go to localhost:3000/login to get started
 
-* Configuration
+## MVP
 
-* Database creation
+At a minimum, I wanted to the app to fulfill the following MVPs:
+1. User should be able to create a user profile
+2. User should be able to login with a username
+3. User should be able to "friend" other users
+4. User should be able to edit or delete their profile
+5. User should be able to see a list of personality types and their desctiptions
+6. User should be able to take a personality quiz
+7. User can only view pages outside login and signup if they are already logged in
 
-* Database initialization
+### Stretch Goals
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+In order to further my app, I wanted to:
+1. Add passwords for user login
+2. Add styling with bootstrap
+3. Add or delete friends from their profile page
+4. Add additional questions to the quiz and additional results
+5. Add more details to the personality type pages
