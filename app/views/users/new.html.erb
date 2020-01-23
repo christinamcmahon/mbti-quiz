@@ -1,12 +1,27 @@
 <h1>Create a New User</h1>
+<form>
+<div class="form-group">
 <%= form_for @user do |f| %>
-    <%= f.label :username %>
-    <%= f.text_field :username %><br>
-    <%= f.label :name %>
-    <%= f.text_field :name %><br>
-    <%= f.label :bio %>
-    <%= f.text_area :bio %><br>
-    <%= f.label "Friends: " %><br>
-    <%= f.collection_check_boxes(:friend_ids , User.all, :id, :name) %><br>
+    <%= f.label "Username: " %>
+    <div class="colo-sm-10">
+        <%= f.text_field :username %><br>
+    </div>
+    <p></p>
+    <%= f.label "Name: " %>
+    <div class="colo-sm-10">
+        <%= f.text_field :name %><br>
+    </div>
+    <p></p>
+    <%= f.label "Bio: " %>
+    <div class="colo-sm-10">
+        <%= f.text_area :bio %><br>
+    </div>
+    <p></p>
+    <%= f.label "Friends: " %>
+    <%= f.collection_check_boxes(:friend_ids , User.all, :id, :name ) do |b| %><br>
+        <%= b.label(class: "label-checkbox") { b.check_box + "  " + b.text } %>
+    <% end %>
+    <p></p>
     <%= f.submit %>
 <% end %>
+</form>

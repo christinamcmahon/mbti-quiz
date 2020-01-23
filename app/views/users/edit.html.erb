@@ -1,12 +1,29 @@
+
+
 <h1>Edit my Profile</h1>
+<form>
+<div class="form-group">
 <%= form_for @user do |f| %>
-    <%= f.label :username %>
-    <%= f.text_field :username %><br>
-    <%= f.label :name %>
-    <%= f.text_field :name %><br>
-    <%= f.label :bio %>
-    <%= f.text_area :bio %><br>
-    <%= f.submit "Update my Profile" %>
+    <%= f.label "Username: " %>
+    <div class="colo-sm-10">
+        <%= f.text_field :username %><br>
+    </div>
+    <p></p>
+    <%= f.label "Name: " %>
+    <div class="colo-sm-10">
+        <%= f.text_field :name %><br>
+    </div>
+    <p></p>
+    <%= f.label "Bio: " %>
+    <div class="colo-sm-10">
+        <%= f.text_area :bio %><br>
+    </div>
+    <p></p>
+    <%= f.submit "Update My Profile" %>
 <% end %>
-<%= link_to "Delete this profile", user_path(@user), method: :delete %>
+<p></p>
+<p class="text-danger">
+    <%= link_to "Delete this profile", user_path(@user), method: :delete %>
+</p>
+</form>
     
