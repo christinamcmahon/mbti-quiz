@@ -35,8 +35,10 @@ class UsersController < ApplicationController
     end
 
     def destroy 
+        Friend.where(friend_id: @user.id).destroy_all
         @user.destroy
-        redirect_to users_path
+
+        redirect_to logout_path
     end
 
     private
