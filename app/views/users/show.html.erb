@@ -8,7 +8,7 @@
 </h2>
 <p><%= @user.username %></p>
 <p><%= @user.bio %></p>
-<h3>Following: 
+<h3>Friends: 
 
 <% @user.friends.each do |friend| %> 
     <% if friend.friend_id != "" %>
