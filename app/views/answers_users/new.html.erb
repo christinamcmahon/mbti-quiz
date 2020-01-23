@@ -4,7 +4,7 @@
     <% @answers.each do |answer| %>
         <%= f.label answer[:question] %>
         <p></p>
-        <%= f.radio_button :option1,  answer[:option1] %>
+        <%= f.radio_button :option1,  answer[:option1] , :checked => true%>
         <%= f.label :option1, answer[:option1] %>
         <p></p>
         <%= f.radio_button :option2,  answer[:option2] %>
