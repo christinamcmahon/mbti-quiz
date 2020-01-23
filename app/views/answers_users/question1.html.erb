@@ -1,0 +1,15 @@
+<h1>Personality Quiz</h1>
+<p>Select the item that you identify with most:</p>
+<%byebug%>
+<%= form_for quiz_question_1_path do |f| %>
+    1. <%= f.label @answer[:question] %>
+    <p></p>
+    <%= f.radio_button :response, "I" , :checked => true %>
+    <%= f.label :option1, @answer[:option1] %>
+    <p></p>
+    <%= f.radio_button :response, "E" %>
+    <%= f.label :option2, @answer[:option2] %>
+    <p></p>
+    <%= f.submit "Next Question" %>
+    <%# where/how do I save the checked radio button in the session? session[:response] = ??? %>
+<% end %>

@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2020_01_21_220448) do
 
   create_table "answers_users", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "answer_id"
+    t.string "response"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
