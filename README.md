@@ -5,6 +5,8 @@ Personality Type Indicator was created by Christina ([christinamcmahon](https://
 Questions were sourced from 16Personalities.
 Type Descriptions were sourced from MyersBriggs.
 
+[Video walkthrough](https://youtu.be/Cry6TClx_yI)
+
 ## About
 
 Personality Type Indicator allows users to create a profile, take a quiz to determine their personality type, and friend other users.
@@ -34,3 +36,4 @@ In order to further my app, I wanted to:
 3. Add or delete friends from their profile page
 4. Add additional questions to the quiz and additional results
 5. Add more details to the personality type pages
+
