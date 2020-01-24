@@ -1,7 +1,7 @@
 <h1>Personality Quiz</h1>
 <p>Select the item that you identify with most:</p>
 <%= form_for quiz_question_2_path do |f| %>
-    1. <%= f.label @answer[:question] %>
+    2. <%= f.label @answer[:question] %>
     <p></p>
     <%= f.radio_button :response, "S" , :checked => true %>
     <%= f.label :option1, @answer[:option1] %>
