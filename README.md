@@ -2,8 +2,8 @@ Flatiron - Mod 2 Project: Personality Type Indicator
 ========================
 
 Personality Type Indicator was created by Christina ([christinamcmahon](https://github.com/christinamcmahon)). 
-Questions were sourced from 16Personalities
-Type Descriptions were sourced from MyersBriggs
+Questions were sourced from 16Personalities.
+Type Descriptions were sourced from MyersBriggs.
 
 ## About
 
@@ -12,7 +12,7 @@ Personality Type Indicator allows users to create a profile, take a quiz to dete
 ## How to Use
  
 1. Clone this to your computer
-2. In the terminal, run **bundle**, **rake db:migrate** and **rake db:seed** to populate the database
+2. In the terminal, run **bundle**, **rails db:migrate**, **rails db:seed**, and **rails s** to populate the database
 3. Go to localhost:3000/login to get started
 
 ## MVP
