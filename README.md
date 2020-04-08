@@ -5,7 +5,7 @@ Personality Type Indicator was created by Christina ([christinamcmahon](https://
 Questions were sourced from 16Personalities.
 Type Descriptions were sourced from MyersBriggs.
 
-[Video walkthrough](https://youtu.be/Cry6TClx_yI)
+[Narrated Video Walkthrough](https://youtu.be/Ar4uMlDEY6Y)
 
 ## About
 
